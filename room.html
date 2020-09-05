@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Meeting Room</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <link rel="stylesheet" href="./css/source-sans-pro.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/animate.min.css" />
+  <link rel="stylesheet" href="./css/room.css" />
+</head>
+
+<body>
+  <div class="app-wrapper d-flex flex-column min-vh-100 overflow-hidden">
+    <header class="app-header bg-primary py-2 d-flex justify-content-center">
+      <span class="fw-600">demo-room</span>
+    </header>
+    <main class="app-main d-flex flex-column flex-grow-1 flex-shrink-1 flex-basis-0">
+      <div class="px-2 d-flex flex-column flex-grow-1">
+        <div class="row mx-n2 flex-grow-1">
+          <div class="col-md-2 px-2 bg-light text-dark">
+            <div class="d-flex flex-column h-100">
+              <div class="d-flex">
+                <h5 class="flex-grow-1 my-2">Users Online</h5>
+                <h5 id="users_count" class="flex-shrink-0 my-2"></h5>
+              </div>
+              <div id="users_joined" class="list-group">
+              </div>
+            </div>
+          </div>
+          <div class="col-md px-2">
+            <div class="app-area-wrapper d-flex flex-column h-100">
+              <div id="videos-container"
+                class="app-area row mx-n2 flex-grow-1 justify-content-center align-items-center"></div>
+              <footer class="app-footer py-2 d-flex justify-content-center">
+                <button id="join-audio" class="btn btn-outline-light rounded-circle square-3 mx-2">
+                  <i class="icon fa fa-microphone-alt-slash"></i>
+                </button>
+                <button id="share-video" class="btn btn-outline-light rounded-circle square-3 mx-2">
+                  <i class="icon fa fa-webcam-slash"></i>
+                </button>
+                <button id="share-screen" class="btn btn-outline-light rounded-circle square-3 mx-2">
+                  <i class="icon fas fa-parking-slash"></i>
+                </button>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="https://webrtc.inovmercury.com/dist/RTCMultiConnection.js"></script>
+  <script src="https://webrtc.inovmercury.com/socket.io/socket.io.js"></script>
+  <script src="./js/bootstrap-notify.min.js"></script>
+  <script src="./js/room.js"></script>
+</body>
+
+</html>
